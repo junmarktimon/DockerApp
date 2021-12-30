@@ -1,41 +1,36 @@
-<?PHP
-	// include('');
-	// require_once('');
-	require('config.php');
-?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Docker App</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DockerApp</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 <body>
-	<h1 id="head">Welcome to Docker, GCCians!</h1>
-	<?PHP 
-		if(isset($_REQUEST['insertUser'])){
-			// Capture POST Method from FORM
-			$un	=	mysqli_real_escape_string($conn,$_POST['uname']);
-			$pw	=	mysqli_real_escape_string($conn,$_POST['passwd']);
-			// Database Insert
-			$sql = mysqli_query($conn,"INSERT INTO tbl_user (`uid`,`uname`,`passwd`) VALUES (1,'".$un."','".$pw."')");
-			if(!$sql){
-				echo "Not Inserted!";
-			}else{
-				echo "Successfully Inserted!";
-			}
-			// var_dump($sql);
-		}
-	?>
-	<form action="" method="POST">
-		<label for="uname">Username</label>
-		<input type="text" id="uname" name="uname">
-		<label for="pwd">Password</label>
-		<input type="password" name="passwd" id="pwd">
-		<button type="submit" name="insertUser">Submit</button>
-	</form>
-	<script>
-		let id = document.querySelector("#head");
-		id.innerHtml = 'JavaScript!';
-		console.log("JavaScript is working...");
-	</script>	
+
+<div class="container">
+
+	<h1> WELCOME TO DOCKER APP </h1>
+
+	<div class="col-4">
+     
+    </div>
+    <div class="col-4">
+			<form>
+				<div class="mb-3">
+					<label for="exampleInputEmail1" class="form-label">Complete Name: </label>
+					<input type="text" class="form-control" id="name">
+				</div>
+				<button type="submit" class="btn btn-primary" name ="submit">Submit</button>
+		</form>
+    </div>
+	<div class="col-4">
+      
+    </div>
+  
+</div>
+	
 </body>
 </html>
