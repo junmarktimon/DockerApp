@@ -29,7 +29,7 @@
 
     <?php
 
-        if(isset($_POST['edit_btn']) && $_POST['edit_btn'] != ""){
+        if(isset($_POST['edit_btn'])){
 
             $id = mysqli_real_escape_string($connection, $_POST['edit_id']);
 
@@ -37,7 +37,7 @@
                 $query_run = mysqli_query($connection,$query);
 
                 foreach ($query_run as $row) {
-                    ?>
+    ?>
 			<form action="crud.php" method="POST">
                 <input type="hidden" name ="edit_id" value="<?php echo $row['id']; ?>">
 				<div class="mb-3">
