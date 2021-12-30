@@ -36,7 +36,7 @@
 			<form action="crud.php" method="POST">
 				<div class="mb-3">
 					<label for="exampleInputEmail1" class="form-label">Complete Name: </label>
-					<input type="text" class="form-control" id="name">
+					<input type="text" class="form-control" id="name" name="name">
 				</div>
 				<button type="submit" class="btn btn-primary" name ="submit">Submit</button>
 		</form>
