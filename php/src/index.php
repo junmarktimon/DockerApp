@@ -79,6 +79,18 @@
 		<tr style="text-transform: capitalize;">
 			<td><?php echo htmlspecialchars($row['id']); ?> </td>
 			<td><?php echo htmlspecialchars($row['name']); ?> </td>
+			<td width="2%">
+				<!-- Button trigger modal -->
+				<button type="button"  class="btn btn-success btn-circle" data-id1="<?php echo htmlspecialchars($row['id']); ?>" data-toggle="modal" data-target="#exampleModal1" id="password">
+					<i class="fas fa-user-edit"></i>
+				</button>	
+		    </td>
+			<td width="2%">
+				<!-- Button trigger modal -->
+				<button type="button"  class="btn btn-danger btn-circle" data-id2="<?php echo htmlspecialchars($row['id']); ?>" data-toggle="modal" data-target="#exampleModal2" id="userdeleteid">
+					<i class="fas fa-user-times"></i>
+				</button>    
+            </td>
         </tr>
 
         <?php
