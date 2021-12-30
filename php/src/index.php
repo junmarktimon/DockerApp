@@ -15,7 +15,7 @@
 	<h1> WELCOME TO DOCKER APP </h1>
 
 	<div class="col-4">
-     
+      <input type="hidden" name="">
     </div>
     <div class="col-4">
 			<form>
@@ -27,7 +27,7 @@
 		</form>
     </div>
 	<div class="col-4">
-      
+		<input type="hidden" name="">
     </div>
   
 </div>
