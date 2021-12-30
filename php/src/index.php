@@ -1,3 +1,10 @@
+<?php
+
+	session_start();
+	include('config.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,6 +51,44 @@
 	<div class="col-4">
 		<input type="hidden" name="">
     </div>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>ID </th>
+				<th>Name </th>
+				<th>Action </th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+		<?php
+			$query = "SELECT * FROM name";
+			$query_run = mysqli_query($connection,$query);
+		?>
+
+
+		<?php
+			if (mysqli_num_rows($query_run) > 0){
+
+				while($row = mysqli_fetch_assoc($query_run)){
+		?>
+
+
+		<tr style="text-transform: capitalize;">
+			<td><?php echo htmlspecialchars($row['id']); ?> </td>
+			<td><?php echo htmlspecialchars($row['name']); ?> </td>
+        </tr>
+
+        <?php
+				}
+       		}
+		?>
+
+		</tbody>
+
+	</table>	
   
 </div>
 	
