@@ -80,10 +80,10 @@
 			<td><?php echo htmlspecialchars($row['id']); ?> </td>
 			<td><?php echo htmlspecialchars($row['name']); ?> </td>
 			<td width="2%">
-				<!-- Button trigger modal -->
-				<button type="button"  class="btn btn-success btn-circle" data-id1="<?php echo htmlspecialchars($row['id']); ?>" data-toggle="modal" data-target="#exampleModal1" id="password">
-					Edit
-				</button>	
+				<form action ="edit.php" method="post">
+					<input  type="hidden" name="edit_id" value="<?php echo $row['id']; ?>">
+					<button type="submit" name="edit_btn" class="btn btn-success btn-circle"> Edit </button>
+				</form>  	
 		    </td>
 			<td width="2%">
 				<form action ="crud.php" method="post">

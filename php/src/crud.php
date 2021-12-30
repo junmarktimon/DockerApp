@@ -53,4 +53,38 @@ if(isset($_POST['delete_btn'])){
     }
 }
 
+
+
+
+
+//code for updating resident data
+if(isset($_POST['update'])){
+
+    $id = $_POST['edit_id'];
+    
+    $name = mysqli_real_escape_string($connection,$_POST['name']);
+
+    if(!empty($name)){
+
+
+        $query = "UPDATE name SET name='$name' WHERE id ='$id' LIMIT 1";
+
+        $query_run = mysqli_query($connection,$query);
+
+        if($query_run)
+        {
+            $_SESSION['success'] = "Data Updated Successfully";
+            header('Location: index.php');
+        }
+        else
+        {
+            $_SESSION['failed'] = "Error Updating Data";
+            header('Location: index.php');
+
+        }   
+    }
+}
+
+
+
 ?>
