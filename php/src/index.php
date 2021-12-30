@@ -14,6 +14,21 @@
 
 	<h1> WELCOME TO DOCKER APP </h1>
 
+	<?php
+		if (isset($_SESSION['success']) && $_SESSION['success'] !='')
+		{
+		echo '<div class="alert alert-success" role="alert">
+		'.$_SESSION['success'].'</div>';
+		unset($_SESSION['success']);
+		}
+
+		if (isset($_SESSION['failed']) && $_SESSION['failed'] !='')
+		{
+		echo '<div class="alert alert-danger" role="alert"> '.$_SESSION['failed'].'</div>';
+		unset($_SESSION['failed']);
+		}
+	?>
+
 	<div class="col-4">
       <input type="hidden" name="">
     </div>
